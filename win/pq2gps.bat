@@ -18,13 +18,17 @@
 SET PFAD=%~dp0
 
 cd "%PFAD%"
-"%PFAD%gpsbabel" -i gpx -f %1 -o xcsv,style="%PFAD%wpt3.style" -F "%PFAD%foo3.txt"
-"%PFAD%gpsbabel" -s -i xcsv,style="%PFAD%wpt2.style" -f "%PFAD%foo3.txt" -o xcsv,style="%PFAD%wpt2.style" -F "%PFAD%foo.txt"
-"%PFAD%updateiconswin"
-"%PFAD%gpsbabel" -i xcsv,style="%PFAD%wpt3.style" -f "%PFAD%foo2.txt" -o garmin,snlen=14 -F usb:
+"%PFAD%gpsbabel" -i gpx -f %1 -o xcsv,style="%PFAD%wpt3.style" -F "%TMP%\foo3.txt"
+"%PFAD%gpsbabel" -s -i xcsv,style="%PFAD%wpt2.style" -f "%TMP%\foo3.txt" -o xcsv,style="%PFAD%wpt2.style" -F "%TMP%\foo.txt"
+copy "%PFAD%updateiconswin.exe" %TMP%
+cd "%TMP%
+updateiconswin.exe"
+cd "%PFAD%"
+"%PFAD%gpsbabel" -i xcsv,style="%PFAD%wpt3.style" -f "%TMP%\foo2.txt" -o garmin,snlen=14 -F usb:
 
-del "%PFAD%foo3.txt"
-del "%PFAD%foo2.txt"
-del "%PFAD%foo.txt"
+del "%TMP%\foo3.txt"
+del "%TMP%\foo2.txt"
+del "%TMP%\foo.txt"
+del "%TMP%\updateiconswin.exe"
 
 pause
