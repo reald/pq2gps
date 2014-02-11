@@ -4,7 +4,7 @@ pq2gps
 Send geocaching pocket querys as waypoints to (old) garmin devices
 
 ![alt text](https://raw2.github.com/reald/pq2gps/master/doc/e.jpg "Waypoint")
-![alt text](https://raaw2.github.com/reald/pq2gps/master/doc/h.jpg "Map")
+![alt text](https://raw2.github.com/reald/pq2gps/master/doc/h.jpg "Map")
 
 Cache types will be displayed in map with related icon and shortname. Tradional, multi, unknown and letterbox 
 caches will be marked with a red X if they are currently unavailable. Every waypoint contains difficulty, 
