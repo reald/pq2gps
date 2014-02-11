@@ -26,23 +26,16 @@ install (windows)
 Next you need the program gpsbabel (http://www.gpsbabel.org/download.html version >=1.3.5). Download and install
 to your desired directory.
 
-Copy the files pq2gps.bat, updateiconswin.exe, wpts2gps.bat, wpt2.style and wpt3.style to the same (!) directory.
+Copy the files pq2gps.bat, updateiconswin.exe, wpts2gps.bat, wpt2.style and wpt3.style into the same (!) directory.
 
+Create two links (drag and drop while holding left alt key) in your sendto folder 
+([systemdrive] / Users / [username] / AppData / Roaming / Microsoft / Windows / SendTo /) for pq2gps.bat and wpts2gps.bat. 
 
 Sending a pocket query to the gps receiver (windows):
 =====================================================
 Plug in your device and power it on. Unzip a pocket query. 
 
-Click on 123456.gpx with right mouse button and choose "open with...". Choose "pq2gps.bat" as program. 
-The pocket query will be processed and sent to your gps device. 
-Important: Do NOT choose the option "always open filetype with this program"! The "open with..." option might disappear!
-
-To send waypoints: Right mouse click on 123456-wpts.gpx, "open with..." and choose "wpts2gps.bat" as program. 
-The waypoints will be sent but without touching the icons.
-
-Better but more complicated alternative: 
-Create 2 links in your sendto folder to pq2gps.bat and wpts2gps.bat. 
-Click on 123456.gpx with right mouse button and choose "send to..." pq2gps.bat for PQ or wpts2gps.bat for waypoints.
+Right click on 123456.gpx and choose "send to..." pq2gps.bat for Pocket Querys or wpts2gps.bat for waypoints.
 
 Other operating systems:
 ========================
