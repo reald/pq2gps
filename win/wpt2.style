@@ -1,0 +1,38 @@
+# style sheet for pq2gps
+#
+# $RCSfile: wpt2.style,v $
+# $Revision: 1.1 $
+# $Date: 2008/09/16 15:36:41 $
+#
+# $Log: wpt2.style,v $
+# Revision 1.1  2008/09/16 15:36:41  real
+# Initial revision
+#
+#
+
+DESCRIPTION SimpleWaypoint - erweiterung für caches
+EXTENSION txt
+FIELD_DELIMITER TAB
+RECORD_DELIMITER NEWLINE
+DATUM   WGS 84
+SHORTLEN 14		# max länge shortnames
+
+#PROLOGUE Latidude Longitude Name
+
+IFIELD LAT_HUMAN_READABLE,"", "%c %d %.3f"
+IFIELD LON_HUMAN_READABLE,"", "%c %d %.3f"
+IFIELD SHORTNAME, "", "%s"
+IFIELD DESCRIPTION,"", "%s"
+IFIELD NOTES,"", "%s"
+IFIELD GEOCACHE_TYPE, "","%s"
+IFIELD GEOCACHE_ISAVAILABLE, "", "%s"
+
+OFIELD LAT_HUMAN_READABLE,"", "%c %d %.3f"
+OFIELD LON_HUMAN_READABLE,"", "%c %d %.3f"
+OFIELD SHORTNAME, "", "%s" 
+OFIELD DESCRIPTION, "", "%s"
+OFIELD NOTES, "", "%s"
+OFIELD GEOCACHE_TYPE, "", "%s"
+OFIELD GEOCACHE_ISAVAILABLE, "", "%s"
+
+#EPILOGUE

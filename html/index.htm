@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>PQ2GPS</title>
+</head>
+<body>
+
+<h1>PQ2GPS</h1>
+<h2>Geocaching Pocket Querys direkt ins GPS laden</h2>
+
+<p><a href="index_en.htm">english description</a></p>
+
+<h3>So sieht es aus</h3>
+
+<center>
+<table border="0"><tr><td><img src="h.jpg"></td><td><img src="e.jpg"></td></tr></table>
+</center>
+
+<p>Die unterschiedlichen Cachetypen werden mit Icon und Kurznamen in der Karte angezeigt,
+deaktivierte Tradi-, Multi-, Mystery- und Letterbox Caches sind mit einem roten X
+gekennzeichnet. In der Wegpunktbeschreibung befindet sich zuerst die
+Schwierigkeit, dann ein Buchstabe für die Cachegröße (M-Micro, R-Regular,
+...), dann die Terrainwertung, dann der GC-Wegpunktname und danach 
+der Cachename (bis Platz verbraucht).</p>
+
+<h3>Voraussetzungen</h3>
+
+<ul>
+<li>aktuelle Version von GPSBabel (s. u.)</li>
+<li>Garmin GPS Empfänger mit Kartenunterstützung (getestet mit Vista HCX, 60
+CSX)</li>
+<li>passendes Datenkabel</li>
+<li>Die Dateien pq2gps.bat, updateicons.exe, wpts2gps.bat, wpt2.style und
+wpt3.style (s.u.)</li>
+</ul>
+
+<h3>Einmalige Schritte (Windows):</h3>
+
+<p>Zuerst müsst ihr die Cacheicons als "Benutzerdefinierte Icons" in das
+GPS laden. Die Icons befinden sich in der Datei <a
+href="icons.zip">icons.zip</a>. Entpacken und 
+mit dem Tool <a href="http://www8.garmin.com/support/download_details.jsp?id=545"> ximage
+von Garmin</a> die Icons in das GPS laden. In der zip Datei sind die 
+deutschen und englischen Dateinamen. Welche Version ihr braucht hängt vom GPS 
+ab. Also erstmal die alten auslesen und sichern und dann anhand der 
+ausgelesenen Dateinamen vergleichen welche Version ihr braucht.</p>
+
+<p>Als nächstes braucht ihr das Programm <a
+href="http://heanet.dl.sourceforge.net/sourceforge/gpsbabel/gpsbabel-1.3.5-beta20080121.zip">GPSBabel
+1.3.5-beta20080121</a> (oder eine noch neuere Version - Version 1.3.4
+funktioniert NICHT!).
+Herunterladen und in ein beliebiges Verzeichnis entpacken.</p>
+
+<p>In das gleiche (!) Verzeichnis speichert ihr auch die Dateien 
+pq2gps.bat, updateiconswin.exe, wpts2gps.bat, wpt2.style und wpt3.style
+(<a href="#download">Download</a>).</p>
+
+<p>Verwendet euer GPS nicht einen USB Anschluss sondern eine serielle
+Schnittstelle, müsst ihr den entsprechenden Anschluss in den 
+Dateien pq2gps.bat und wpts2gps.bat angeben: Alle Stellen, an denen
+"-F usb:" steht, müssen dann auf den entsprechende COM-Port ("-F com1:" 
+für COM1 "-F com2: für COM2) umgebogen werden.</p>
+
+<p>Das war jetzt schon so ziemlich das Schwierigste - diese Schritte 
+müssen auch nur einmal ausgeführt werden.</p>
+
+<h3>Pocket Query in das GPS laden (Windows):</h3>
+
+<p>Los gehts: GPS anschließen und 
+einschalten. Eine Pocket Query entpacken. Im Explorer mit der rechten 
+Maustaste auf 123456.gpx gehen und wählen "Öffnen mit..." (Erscheint diese
+Option nicht, hilft evtl. Shift gedrückt halten, dann erst rechte Maustaste). 
+Dann als Programm die Datei "pq2gps.bat" auswählen. Darauf sollte die 
+Pocket Query verarbeitet und ins GPS geladen werden. Wichtig: NICHT
+die Option "Diesen Dateityp immer mit diesem Programm öffnen" auswählen,
+da für Caches und Wegpunkte (beides .gpx Dateien!) unterschiedliche Programme
+verwendet werden.</p>
+
+<p>Die Wegpunkte zur PQ: Rechte Maustaste auf 123456-wpts.gpx, 
+"Öffnen mit..." und als Programm die Datei "wpts2gps.bat" angeben. Dann 
+werden auch die Wegpunkte nachgeladen, jedoch ohne die Icons zu verändern.</p>
+
+<a name="download"/>
+<h3>Download</h3>
+<p><ul>
+<li><a href="http://www.myway.de/sqrt/pq2gps/pq2gps.zip">Windows (.zip)</a></li>
+<li><a href="http://www.myway.de/sqrt/pq2gps/pq2gps.tgz">Linux/Mac (.tgz)</a></li>
+</ul></p>
+
+<h3>Sonstiges:</h3>
+<p>Bugs und Erfahrungsberichte (insbesondere erfolgreich getestete GPS
+Empfänger) bitte kurz an <a mailto:"sqrt@tildepipe.de">sqrt@tildepipe.de</a>
+schicken.</p>
+
+<h3>Andere Betriebssysteme (Linux, Mac):</h3>
+<p>Grundsätzlich sind alle Betriebssysteme möglich, auf denen eine aktuelle 
+Version von <a href="http://www.gpsbabel.org">GPSBabel</a> läuft. 
+Die zweite angebotene Datei enthält ähnliche Skripte für Linux bzw. Mac.
+Gegebenenfalls muss in den *.sh Skripten das USB Device angepasst werden (s.
+Kommentare in den Dateien).
+</p>
+<p>Das (einmalige) Laden der benutzerdefinierten Icons scheint jedoch nur
+unter Windows zu funktionieren (oder kennt jemand Alternativen zu ximage?).</p>
+
+</body>
+</html>
