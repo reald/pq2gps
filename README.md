@@ -10,12 +10,16 @@ Cache types will be displayed in map with related icon and shortname. Tradional,
 caches will be marked with a red X if they are currently unavailable. Every waypoint contains difficulty, 
 size, terrain, gc waypoint code and name (until no space left).
 
-preconditions
+Preconditions
 =============
 - recent version of gpsbabel for you OS
 - garmin gps receiver with map support (tested with vista hcx, 60 csx)
 - usb data cable
 - files pq2gps.bat, updateicons.exe (.pl on linux), wpts2gps.bat, wpt2.style and wpt3.style (see below)
+
+Download
+========
+- Checkout git repository or download zip: https://github.com/reald/pq2gps/archive/master.zip
 
 prepare gps receiver (only once)
 ================================
